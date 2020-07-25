@@ -90,3 +90,14 @@ body{
     background-color: rgba(43, 39, 39, 0.055);
     border-bottom: 1px solid blue;
 }
+@media screen and (max-width: 550px){
+    .main-div input{
+        width: 90% !important;
+    }
+    #list{
+        width: 95% !important;
+    }
+    .main-div{
+        margin-top: 60px !important;
+    }
+}
