@@ -1,3 +1,4 @@
+
 var list = document.getElementById("list");
 
 
@@ -11,16 +12,18 @@ function addTodo() {
 
   // delete button////////////////////////////////
   var delBtn = document.createElement("button");
-  var DelText = document.createTextNode("DELETE");
+  var delIcon = document.createElement("i")
+  delIcon.setAttribute("class","fa fa-trash")
   delBtn.setAttribute("onclick", "deleteItem(this)");
   delBtn.setAttribute("class", "liBtn");
-  delBtn.appendChild(DelText);
+  delBtn.appendChild(delIcon);
 
   // edit Button/////////////////////////////////////////?
   var editBtn = document.createElement("button");
-  var editBtnTxt = document.createTextNode("Edit");
+  var editicon = document.createElement("i")
+  editicon.setAttribute("class","fa fa-pencil-square-o")
   editBtn.setAttribute("class", "liBtn")
-  editBtn.appendChild(editBtnTxt);
+  editBtn.appendChild(editicon);
   editBtn.setAttribute("onclick", "Edit(this)");
 
 
@@ -43,7 +46,6 @@ function Edit(s) {
   var newEditVal = document.createElement("input")
   newEditVal.setAttribute("type","text")
   newEditVal.setAttribute("value","text")
-  console.log(newEditVal.value)
 
 // var editValue = document.createElement("input")
 // editValue.setAttribute("type","text")
@@ -52,7 +54,6 @@ function Edit(s) {
 // console.log(editValue)
 
   s.parentNode.firstChild.nodeValue = editVal;
-  console.log(s.parentNode.firstChild.NodesValue);
 }
 
 function deleteItem(a) {
